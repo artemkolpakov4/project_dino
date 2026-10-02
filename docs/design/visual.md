@@ -1,5 +1,7 @@
 # Визуал
 
+Референсы собираем на доске Miro [project_dino — референсы](https://miro.com/app/board/uXjVEfW1O6k=/). Наши картинки лежат в [images](images/README.md).
+
 ## Что придумали
 
 1. Пиксельная графика. Идеал — Song of Conquest.
