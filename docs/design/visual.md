@@ -1,6 +1,6 @@
 # Визуал
 
-Референсы собираем на доске Miro, ссылка появится здесь, когда доска будет готова. Наши картинки лежат в [images](images/README.md).
+Референсы собираем на доске Miro [project_dino — референсы](https://miro.com/app/board/uXjVEfW1O6k=/). Наши картинки лежат в [images](images/README.md).
 
 ## Что придумали
 
