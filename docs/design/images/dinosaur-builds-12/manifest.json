@@ -1,0 +1,98 @@
+[
+  {
+    "file": "heroes-01-winged-scout.png",
+    "origin": "output/dinosaur-builds-12/01-winged-scout.png",
+    "visual_control": "pending",
+    "width": 1672,
+    "height": 941,
+    "sha256": "414a66ba191859d1e79d299e1233ada18b0ed57ba1075d2b7c7849e189f40d4b"
+  },
+  {
+    "file": "heroes-02-longleg-runner.png",
+    "origin": "output/dinosaur-builds-12/02-longleg-runner.png",
+    "visual_control": "pending",
+    "width": 1672,
+    "height": 941,
+    "sha256": "8b75b53e32a84ca70b16b52a7bd602084454f37d264a0fc4e9bf2356232fbf14"
+  },
+  {
+    "file": "heroes-03-shadow-stalker.png",
+    "origin": "output/dinosaur-builds-12/03-shadow-stalker.png",
+    "visual_control": "pending",
+    "width": 1672,
+    "height": 941,
+    "sha256": "ade2c75fc9549baf35357b670384fb2e21908004d45871af929f3bc122d27c55"
+  },
+  {
+    "file": "heroes-04-armored-fortress.png",
+    "origin": "output/dinosaur-builds-12/04-armored-fortress.png",
+    "visual_control": "pending",
+    "width": 1672,
+    "height": 941,
+    "sha256": "0daaee46bbfacadbaab8fe39b55679cbcb6b3338fae87eb93050467d4bb99c02"
+  },
+  {
+    "file": "heroes-05-spiked-trapmaker.png",
+    "origin": "output/dinosaur-builds-12/05-spiked-trapmaker.png",
+    "visual_control": "pending",
+    "width": 1672,
+    "height": 941,
+    "sha256": "2c321ad81283f453958363cd1da93923230af7fcbf2029401325bfabc404dfbb"
+  },
+  {
+    "file": "heroes-06-banner-herald.png",
+    "origin": "output/dinosaur-builds-12/06-banner-herald.png",
+    "visual_control": "pending",
+    "width": 1672,
+    "height": 941,
+    "sha256": "030d585309ff6eb3b305d14cfdd64be7f401156db76e0b0235429d55b6d12c87"
+  },
+  {
+    "file": "heroes-07-horned-ram.png",
+    "origin": "output/dinosaur-builds-12/07-horned-ram.png",
+    "visual_control": "pending",
+    "width": 1672,
+    "height": 941,
+    "sha256": "962417a10d1a83d1af6dbe47fbdce647ce73bb3b2f41d59943fe4d72bdaf8f3d"
+  },
+  {
+    "file": "heroes-08-hooked-grappler.png",
+    "origin": "output/dinosaur-builds-12/08-hooked-grappler.png",
+    "visual_control": "pending",
+    "width": 1672,
+    "height": 941,
+    "sha256": "231120bb0155141b465bd595db586a5ac9ab55342dcf27f242acf1d40dcba4ee"
+  },
+  {
+    "file": "heroes-09-winged-bulwark.png",
+    "origin": "output/dinosaur-builds-12/09-winged-bulwark.png",
+    "visual_control": "pending",
+    "width": 1672,
+    "height": 941,
+    "sha256": "3f2583393bcdc69429e7a645deca6cfbbdf12180bb567b99569d9f14aab78f29"
+  },
+  {
+    "file": "heroes-10-crowned-seer.png",
+    "origin": "output/dinosaur-builds-12/10-crowned-seer.png",
+    "visual_control": "pending",
+    "width": 1672,
+    "height": 941,
+    "sha256": "a6cc018758a74a0b2b550edca7568fa80943c47d39b0958e9eb600706ad9f029"
+  },
+  {
+    "file": "heroes-11-potion-alchemist.png",
+    "origin": "output/dinosaur-builds-12/11-potion-alchemist.png",
+    "visual_control": "pending",
+    "width": 1672,
+    "height": 941,
+    "sha256": "9995831dc8be0491fab2132a4b7c2b7c7da806cde181f348b7b2ece2c2002587"
+  },
+  {
+    "file": "heroes-12-plated-pathfinder.png",
+    "origin": "output/dinosaur-builds-12/12-plated-pathfinder.png",
+    "visual_control": "pending",
+    "width": 1672,
+    "height": 941,
+    "sha256": "51e3504dd7af5561d9c05fdf8b141e2ee4a7d53dda31ce2fb55419c4d3a803be"
+  }
+]
