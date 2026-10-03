@@ -1,0 +1,138 @@
+[
+  {
+    "file": "visual-01-local-topdown.png",
+    "origin": "output/game-mockups-15/01-local-topdown.png",
+    "visual_control": "pending",
+    "width": 1672,
+    "height": 941,
+    "sha256": "3298141627258bf32307a0123055c9efcebc40886abe7638795384d33ea8d90a"
+  },
+  {
+    "file": "visual-02-isometric-balconies.png",
+    "origin": "output/game-mockups-15/02-isometric-balconies.png",
+    "visual_control": "pending",
+    "width": 1672,
+    "height": 941,
+    "sha256": "b579505a171fa6056bf94e0e0f168795f40c271e8549cfec54beab030e66c4a7"
+  },
+  {
+    "file": "visual-03-horizontal-cutaway-v2.png",
+    "origin": "output/game-mockups-15/03-horizontal-cutaway-v2.png",
+    "visual_control": "pending",
+    "width": 1672,
+    "height": 941,
+    "sha256": "70b4c9c7751bc68c8f2abe742a75115d9fe0d204fdb5f50122ccb88343923fd5"
+  },
+  {
+    "file": "visual-03-horizontal-cutaway.png",
+    "origin": "output/game-mockups-15/03-horizontal-cutaway.png",
+    "visual_control": "pending",
+    "width": 1672,
+    "height": 941,
+    "sha256": "8a8b97e7d79fe033095aa00e7958b950b4767c549702a56dbb8b82be9efc2e42"
+  },
+  {
+    "file": "visual-04-vertical-dollhouse.png",
+    "origin": "output/game-mockups-15/04-vertical-dollhouse.png",
+    "visual_control": "pending",
+    "width": 1672,
+    "height": 941,
+    "sha256": "88590ab9caa7288886be7922a6cba411e0018cda86061c212602dc8bf4a099f8"
+  },
+  {
+    "file": "visual-05-hero-room.png",
+    "origin": "output/game-mockups-15/05-hero-room.png",
+    "visual_control": "pending",
+    "width": 1672,
+    "height": 941,
+    "sha256": "7a738556163c6c80b86aa5bc6f363cd774540b55642fcd48eaaf64e1da8a5364"
+  },
+  {
+    "file": "visual-06-room-tiles.png",
+    "origin": "output/game-mockups-15/06-room-tiles.png",
+    "visual_control": "pending",
+    "width": 1672,
+    "height": 941,
+    "sha256": "f75f5e5de3e67d4cc5797e305884c69c3fd8c69dce9f2d65f706babdcad01d45"
+  },
+  {
+    "file": "visual-07-gate-panorama.png",
+    "origin": "output/game-mockups-15/07-gate-panorama.png",
+    "visual_control": "pending",
+    "width": 1672,
+    "height": 941,
+    "sha256": "40dd9d08b4819c39e41a66fdc0d7ad39e41ded72525b3a08c753104b7ef57534"
+  },
+  {
+    "file": "visual-08-tabletop-pixel.png",
+    "origin": "output/game-mockups-15/08-tabletop-pixel.png",
+    "visual_control": "pending",
+    "width": 1672,
+    "height": 941,
+    "sha256": "0bed97d83a994092129893e1f703b82ef65a2e7c00038e10ab1e5cdab52c3d5d"
+  },
+  {
+    "file": "visual-09-pixel-theatre.png",
+    "origin": "output/game-mockups-15/09-pixel-theatre.png",
+    "visual_control": "pending",
+    "width": 1672,
+    "height": 941,
+    "sha256": "8b81e15277df360d2762e27d22cd5d858d9aabda580f0f652603966c6b739670"
+  },
+  {
+    "file": "visual-10-sky-bridges.png",
+    "origin": "output/game-mockups-15/10-sky-bridges.png",
+    "visual_control": "pending",
+    "width": 1672,
+    "height": 941,
+    "sha256": "66e33b361213c255ac5087eb2f5e0088fcd4009541f079c0b4194839221ee349"
+  },
+  {
+    "file": "visual-11-gothic-lantern.png",
+    "origin": "output/game-mockups-15/11-gothic-lantern.png",
+    "visual_control": "pending",
+    "width": 1672,
+    "height": 941,
+    "sha256": "59b11aa12670db7e72251016c1e52aff4812c8d525ea3170c0406a7aa824fc5f"
+  },
+  {
+    "file": "visual-12-arcade-arena-v2.png",
+    "origin": "output/game-mockups-15/12-arcade-arena-v2.png",
+    "visual_control": "pending",
+    "width": 1672,
+    "height": 941,
+    "sha256": "98621057cadc097962ee5d32f49db705abc408efc26657c5042eefbec2909463"
+  },
+  {
+    "file": "visual-12-arcade-arena.png",
+    "origin": "output/game-mockups-15/12-arcade-arena.png",
+    "visual_control": "pending",
+    "width": 1672,
+    "height": 941,
+    "sha256": "490229f4b5e9998152b930cb7db9f8d8f16b011618c62fbc722d535cae09e4ae"
+  },
+  {
+    "file": "visual-13-illustrated-atlas.png",
+    "origin": "output/game-mockups-15/13-illustrated-atlas.png",
+    "visual_control": "pending",
+    "width": 1672,
+    "height": 941,
+    "sha256": "303e54ac3bf9092c6bd43e28f58f6fc2df94253e1f931578cd06839f3dec4233"
+  },
+  {
+    "file": "visual-14-clay-diorama.png",
+    "origin": "output/game-mockups-15/14-clay-diorama.png",
+    "visual_control": "pending",
+    "width": 1672,
+    "height": 941,
+    "sha256": "d9c80fb792d9657ea67593fcfdb8c9d4949d090bed89fd2915fc1fc43400b327"
+  },
+  {
+    "file": "visual-15-shadow-puppets.png",
+    "origin": "output/game-mockups-15/15-shadow-puppets.png",
+    "visual_control": "pending",
+    "width": 1672,
+    "height": 941,
+    "sha256": "c4314e820243813d54922bc45bccb0bd08e69c37518cf45d7b0aff4519465d7d"
+  }
+]
