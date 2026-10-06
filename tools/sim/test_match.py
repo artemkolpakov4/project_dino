@@ -24,6 +24,23 @@ class MatchTest(unittest.TestCase):
         fight = statistics.mean(match.turn_seconds(rng, 3, 2, True, True, False) for _ in range(2000))
         self.assertTrue(25 <= fight - quiet <= 35, fight - quiet)
 
+    def test_winner_takes_grail_so_it_never_lies_on_floor(self):
+        drops = 0
+        for seed in range(40):
+            trace = []
+            match.play(4, random.Random(seed), trace=trace)
+            drops += sum(1 for event in trace if event[0] == "грааль на полу")
+        self.assertEqual(drops, 0)
+
+    def test_collapse_starts_by_itself_if_nobody_takes_grail(self):
+        old = match.DETOUR_CHANCE
+        match.DETOUR_CHANCE = 1.0  # все бесконечно бродят за добычей
+        try:
+            result = match.play(4, random.Random(5))
+        finally:
+            match.DETOUR_CHANCE = old
+        self.assertLessEqual(result.rounds, match.AUTO_COLLAPSE_ROUND + match.COLLAPSE_ROUNDS)
+
     def test_two_players_play_shorter_than_four(self):
         two = statistics.mean(match.play(2, random.Random(s)).minutes for s in range(60))
         four = statistics.mean(match.play(4, random.Random(s)).minutes for s in range(60))

@@ -5,8 +5,15 @@ from castle import Castle, FUNNEL_EXIT, GATES, GRAIL
 
 
 class CastleGeometryTest(unittest.TestCase):
-    def test_castle_has_thirty_rooms(self):
-        self.assertEqual(len(Castle.full().rooms), 30)
+    def test_castle_has_twenty_seven_rooms(self):
+        self.assertEqual(len(Castle.full().rooms), 27)
+
+    def test_no_dead_ends_without_walls(self):
+        castle = Castle.full()
+        for room in castle.rooms:
+            if room == GRAIL:
+                continue
+            self.assertGreaterEqual(len(castle.neighbors(room)), 2, room)
 
     def test_every_gate_is_seven_steps_from_grail_without_walls(self):
         castle = Castle.full()

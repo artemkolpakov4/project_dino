@@ -8,7 +8,7 @@ import random
 from collections import deque
 from dataclasses import dataclass, field
 
-from castle import Castle, GATES, GRAIL
+from castle import CORRIDOR, Castle, GATES, GRAIL
 
 # --- Тайминги хода, секунды (gameplay.md: «Ход», «Встречи и бой») ------------
 ROLES_REVEAL = 3
@@ -31,8 +31,10 @@ ATTACK_CHANCE = 0.5          # фазы 1–2: напасть при встре�
 OBSTACLE_PER_STEP = 0.03     # завал или баррикада останавливают движение
 STRONG_MONSTER = 0.07        # доля сильных монстров среди новых комнат
 SHOP_ROOM = 0.05
-REVEAL_ROUND = 6             # часы: на 6-м круге комната грааля открывается всем
-COLLAPSE_ROUNDS = 5          # часы: столько кругов после взятия грааля
+AUTO_COLLAPSE_ROUND = 8      # часы: если грааль не взят к 8-му кругу, обвал начинается сам
+COLLAPSE_ROUNDS = 9          # часы: столько кругов после взятия грааля
+WINNER_TAKES_GRAIL = True    # победитель боя сразу забирает грааль (иначе грааль падает на пол)
+CORRIDOR_STOPS = True        # в коридоре движение останавливается в каждой неоткрытой комнате
 LINKA_ROUND = 4
 
 
@@ -92,7 +94,7 @@ def _path(castle, start, goal):
     return list(reversed(path))
 
 
-def play(n_players, rng):
+def play(n_players, rng, trace=None):
     castle = Castle.with_walls(rng)
     gates = {2: [GATES[1], GATES[2]], 3: [GATES[0], GATES[1], GATES[3]], 4: list(GATES)}[n_players]
     players = [Player(gate=g, pos=g) for g in gates]
@@ -102,11 +104,14 @@ def play(n_players, rng):
     seconds = rng.uniform(*SETUP[n_players]) + rng.uniform(*LETOPIS)
     pickups = pvp = turns = fight_turns = 0
     first_pickup = 0
+    trace = trace if trace is not None else []
     turn_no = 0
 
     for rnd in range(1, 31):
         if rnd == LINKA_ROUND:
             seconds += LINKA
+        if not grail_taken and rnd == AUTO_COLLAPSE_ROUND:
+            grail_taken, collapse_end = True, rnd + COLLAPSE_ROUNDS
         for i, me in enumerate(players):
             turn_no += 1
             turns += 1
@@ -144,6 +149,8 @@ def play(n_players, rng):
                     break
                 if grail_pos == room or rng.random() < OBSTACLE_PER_STEP:
                     break
+                if CORRIDOR_STOPS and room in CORRIDOR and room not in explored:
+                    break
 
             if met is not None:
                 if phase3 or rng.random() < ATTACK_CHANCE:
@@ -151,8 +158,21 @@ def play(n_players, rng):
                     pvp += 1
                     i_win = rng.random() < 0.5
                     loser = met if i_win else i
+                    winner = i if i_win else met
                     if holder == loser:
-                        holder, grail_pos = None, players[loser].pos
+                        if WINNER_TAKES_GRAIL:
+                            holder = winner
+                            pickups += 1
+                        else:
+                            holder, grail_pos = None, players[loser].pos
+                            trace.append(("грааль на полу", rnd))
+                    elif WINNER_TAKES_GRAIL and holder is None and grail_pos == players[winner].pos:
+                        holder, grail_pos = winner, None
+                        pickups += 1
+                        if not grail_taken:
+                            grail_taken, collapse_end = True, rnd + COLLAPSE_ROUNDS
+                            seconds += LINKA
+                            first_pickup = rnd
                     free = [r for r in castle.neighbors(players[loser].pos)
                             if r not in {p.pos for p in players}]
                     if free:

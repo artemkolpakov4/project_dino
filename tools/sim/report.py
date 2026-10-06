@@ -44,20 +44,26 @@ def reaction_skill_gap():
 
 
 def matches():
-    print("| Игроков | Обвал, кругов | Минут в среднем | 10–90% партий | Кругов | Грааль взят на круге | Вынос воротами | Сколько раз брали грааль | Боёв игроков | Секунд на ход |")
+    configs = [
+        ("как в цепочке #6–#17", dict(COLLAPSE_ROUNDS=5, WINNER_TAKES_GRAIL=False, CORRIDOR_STOPS=False)),
+        ("после правок", dict(COLLAPSE_ROUNDS=9, WINNER_TAKES_GRAIL=True, CORRIDOR_STOPS=True)),
+    ]
+    defaults = {key: getattr(match, key) for key in configs[0][1]}
+    print("| Игроков | Правила | Минут в среднем | 10–90% партий | Кругов | Грааль взят на круге | Вынос воротами | Сколько раз брали грааль | Боёв игроков | Секунд на ход |")
     print("|---|---|---|---|---|---|---|---|---|---|")
     for n in (2, 3, 4):
-        for collapse in (5, 9):
-            match.COLLAPSE_ROUNDS = collapse
+        for label, params in configs:
+            for key, value in params.items():
+                setattr(match, key, value)
             rs = [match.play(n, random.Random(7000 + s)) for s in range(N_MATCH)]
             mins = sorted(r.minutes for r in rs)
             lo, hi = mins[len(mins) // 10], mins[9 * len(mins) // 10]
-            print(f"| {n} | {collapse} | {statistics.mean(mins):.1f} | {lo:.0f}–{hi:.0f} | "
+            print(f"| {n} | {label} | {statistics.mean(mins):.1f} | {lo:.0f}–{hi:.0f} | "
                   f"{statistics.mean(r.rounds for r in rs):.1f} | {statistics.mean(r.first_pickup for r in rs):.1f} | "
                   f"{pct(sum(r.reason == 'ворота' for r in rs) / len(rs))} | {statistics.mean(r.pickups for r in rs):.1f} | "
                   f"{statistics.mean(r.pvp_fights for r in rs):.1f} | {statistics.mean(r.seconds / r.turns for r in rs):.0f} |")
-    match.COLLAPSE_ROUNDS = 5
-
+    for key, value in defaults.items():
+        setattr(match, key, value)
 
 if __name__ == "__main__":
     print("## Бои с бонусами как записано\n"); fights_as_written()
