@@ -10,6 +10,7 @@
 - [Локация](location.md)
 - [Геймплей](gameplay.md)
 - [Визуал](visual.md)
+- [Вселенная](world.md)
 
 ## Картинки
 
